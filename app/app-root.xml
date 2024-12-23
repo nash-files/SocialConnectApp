@@ -1,0 +1,16 @@
+<Frame defaultPage="components/feed/feed-page">
+  <TabView>
+    <TabViewItem title="Feed" iconSource="res://home">
+      <Frame defaultPage="components/feed/feed-page" />
+    </TabViewItem>
+    <TabViewItem title="Live" iconSource="res://video">
+      <Frame defaultPage="components/live/live-page" />
+    </TabViewItem>
+    <TabViewItem title="Q&A" iconSource="res://question">
+      <Frame defaultPage="components/qa/qa-page" />
+    </TabViewItem>
+    <TabViewItem title="Profile" iconSource="res://profile">
+      <Frame defaultPage="components/profile/profile-page" />
+    </TabViewItem>
+  </TabView>
+</Frame>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" 
+      navigatingTo="onNavigatingTo"
+      class="page">
+  <ActionBar title="Feed">
+    <ActionItem tap="{{ onNewPost }}" ios.position="right" android.position="actionBar">
+      <Label text="+" class="text-2xl" />
+    </ActionItem>
+  </ActionBar>
+
+  <GridLayout>
+    <ListView items="{{ posts }}" class="list-group">
+      <ListView.itemTemplate>
+        <StackLayout class="list-group-item p-4">
+          <Label text="{{ username }}" class="font-bold" />
+          <Label text="{{ content }}" textWrap="true" class="my-2" />
+          <Image src="{{ mediaUrl }}" 
+                 class="w-full h-48" 
+                 visibility="{{ mediaUrl ? 'visible' : 'collapsed' }}" 
+                 stretch="aspectFill" />
+          <GridLayout columns="auto,auto" class="mt-2">
+            <Label col="0" text="❤️ {{ likes }}" class="mr-4" />
+            <Label col="1" text="💬 {{ comments }}" />
+          </GridLayout>
+        </StackLayout>
+      </ListView.itemTemplate>
+    </ListView>
+  </GridLayout>
+</Page>
